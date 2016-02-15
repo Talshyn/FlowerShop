@@ -13,6 +13,12 @@ public  class Flower implements Comparable<Flower> {
 
     }
 
+
+
+    public int getCost() {
+        return Cost;
+    }
+
     @Override
     public String toString() {
         return super.toString();
