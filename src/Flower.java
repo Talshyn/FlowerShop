@@ -1,10 +1,20 @@
 /**
  * Created by user on 14.02.2016.
  */
-public  class Flower implements Comparable<Flower> {
-    public int Cost;
+public abstract class Flower implements Comparable<Flower> {
+
+    public enum Freshness {
+        FullFresh,
+        MiddleFresh,
+        OldFresh }
+
+
+    int Cost;
     public Freshness Fresh;
     public int StalkLength;
+
+
+
 
     public Flower(int cost, Freshness fresh, int stalk) {
         this.Cost = cost;
@@ -14,10 +24,12 @@ public  class Flower implements Comparable<Flower> {
     }
 
 
-
     public int getCost() {
         return Cost;
     }
+    public void setCost(){}
+
+
 
     @Override
     public String toString() {
@@ -26,9 +38,9 @@ public  class Flower implements Comparable<Flower> {
 
     @Override
     public int compareTo(Flower other) {
-        if(this.Cost > other.Cost)
+        if(this.Fresh == other.Fresh)
         {return  1;}
-        if(this.Cost <other.Cost)
+        if(this.Fresh != other.Fresh)
         {return  -1;}
         else return 0;
     }
