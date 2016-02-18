@@ -9,25 +9,25 @@ public abstract class Flower implements Comparable<Flower> {
         OldFresh }
 
 
-    int Cost;
+    public int Cost;
     public Freshness Fresh;
     public int StalkLength;
 
 
 
 
-    public Flower(int cost, Freshness fresh, int stalk) {
-        this.Cost = cost;
+    public Flower(Freshness fresh, int stalk) {
+
         this.Fresh = fresh;
         this.StalkLength =stalk;
 
     }
 
 
-    public int getCost() {
+    public int getCost(){
         return Cost;
     }
-    public void setCost(){}
+    public void setCostByFresh(){}
 
 
 
